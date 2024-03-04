@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h4>Your Information</h4>
+
+<table class = "table" >
+    <thead>
+      <tr>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Username</th>
+        <th scope="col">Email ID</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>{{request.user.first_name}}</td>
+        <td>{{request.user.last_name}}</td>
+        <td>{{request.user.username}}</td>
+        <td>{{request.user.email}}</td>   
+      </tr>
+
+    </tbody>
+  </table>
+
+{% endblock %}
